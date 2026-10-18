@@ -98,7 +98,6 @@ test('api assignment 3', async ({ browser }) => {
     const count = await page.locator("#event-card").count()
     await expect(count).toEqual(4)
     await expect(page.getByText("9 bookings")).toBeHidden()
-    await page.pause()
 
 
 })

@@ -60,5 +60,4 @@ console.log(orderid)
 await page.locator("li [routerlink='/dashboard/myorders']").click()
 const orderid2=await page.locator("[scope='row']").nth(0).textContent()
 expect(orderid).toContain(orderid2)
-await page.pause()
 });

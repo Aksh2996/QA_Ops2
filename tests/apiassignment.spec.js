@@ -62,7 +62,6 @@ test('api assignment 1', async ({ browser }) => {
         console.log(await addeventresponse.json())
     }
     await page.locator("#nav-events").click()
-    await page.pause()
 
 
 })

@@ -55,8 +55,4 @@ const rowid=await orderlist.nth(i).locator("th").textContent()
 }
 const oid=await page.locator(".col-text").textContent()
 expect(orderid.includes(oid)).toBeTruthy()
-await page.pause()
 });
-
-
-

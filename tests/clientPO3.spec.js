@@ -29,7 +29,7 @@ for(let i=0;i<prodcount;++i)
 }
 await page.locator("[routerlink*='cart']").click()
 await page.locator("div li").first().waitFor()
-const bool=await page.locator("h3:has-text('Zra Cot 3')").isVisible()
+const bool=await page.locator("h3:has-text('Zara Coat 3')").isVisible()
 expect(bool).toBeTruthy()
 await page.locator("text=Checkout").click()
 await page.locator("[placeholder*='Country']").pressSequentially("Ind")
@@ -77,9 +77,3 @@ await dashboardpage.addproductsthenselect("ZARA COAT 3")
 await dashboardpage.navigatetocart()
 });
 }
-
-
-
-
-
-
