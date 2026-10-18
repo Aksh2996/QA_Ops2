@@ -1,4 +1,4 @@
-const {test}=require('@Playwright/test')
+const {test}=require('@playwright/test')
 
 test('first playwright test2', async ({ page }) => {
 

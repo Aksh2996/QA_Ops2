@@ -1,4 +1,4 @@
-const {test,expect}=require('@Playwright/test');
+const {test,expect}=require('@playwright/test');
 let webcontext
 
 test.beforeAll(async({browser})=>
@@ -62,4 +62,3 @@ const orderid2=await page.locator("[scope='row']").nth(0).textContent()
 expect(orderid).toContain(orderid2)
 await page.pause()
 });
-

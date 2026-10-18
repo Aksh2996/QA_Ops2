@@ -1,4 +1,4 @@
-const {test,expect,request}=require('@Playwright/test');
+const {test,expect,request}=require('@playwright/test');
 const{APIutils2}=require('../Utils/APIutils2')
 const loginpayload={userEmail: "aprakash270@gmail.com", userPassword:"Vihaan@1234"}
 const orderpayload={orders: [{country: "India", productOrderedId: "6960eac0c941646b7a8b3e68"}]}
@@ -38,4 +38,3 @@ const rowid=await orderlist.nth(i).locator("th").textContent()
 const oid=await page.locator(".col-text").textContent()
 await page.pause()
 });
-

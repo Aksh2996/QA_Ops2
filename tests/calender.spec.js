@@ -1,4 +1,4 @@
-const {test,expect}=require('@Playwright/test')
+const {test,expect}=require('@playwright/test')
 test('calender assignment',async({page})=>
 {
 const month="6"

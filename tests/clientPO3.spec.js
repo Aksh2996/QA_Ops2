@@ -1,8 +1,9 @@
-const {test,expect}=require('@Playwright/test');
+const {test,expect}=require('@playwright/test');
 const {customtest}=require('../Utils/Testdata')
 const { text } = require('node:stream/consumers');
 const {POManager}=require('./PageObjectmodel/POmanager')
 const data=JSON.parse(JSON.stringify(require('../Utils/Testdata.json')))
+const testData = Array.isArray(data) ? data : [data]
 
 test.describe.configure({mode:'serial'})
 
@@ -59,7 +60,7 @@ expect(orderid).toContain(orderid2)
 });
 
 
-for (const da of data)
+for (const da of testData)
 {
 test(`first playwright test2 for ${da.username}`,async({browser})=>
 {
@@ -76,7 +77,6 @@ await dashboardpage.addproductsthenselect("ZARA COAT 3")
 await dashboardpage.navigatetocart()
 });
 }
-
 
 
 

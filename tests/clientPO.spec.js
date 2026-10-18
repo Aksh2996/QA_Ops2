@@ -1,10 +1,11 @@
-const {test,expect}=require('@Playwright/test');
+const {test,expect}=require('@playwright/test');
 const {customtest}=require('../Utils/Testdata')
 const { text } = require('node:stream/consumers');
 const {POManager}=require('./PageObjectmodel/POmanager')
 const data=JSON.parse(JSON.stringify(require('../Utils/Testdata.json')))
+const testData = Array.isArray(data) ? data : [data]
 
-for (const da of data)
+for (const da of testData)
 {
 test(`@Web first playwright test2 for ${da.username}`,async({browser})=>
 {
@@ -151,4 +152,3 @@ const rowid=await orderlist.nth(i).locator("th").textContent()
 const oid=await page.locator(".col-text").textContent()
 expect(orderid.includes(oid)).toBeTruthy()
 });
-

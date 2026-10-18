@@ -3,8 +3,9 @@ import {customtest} from '../Utils_ts/Testdata'
 import { POManager } from './PageObjectmodel_ts/POmanager'
 import data from '../Utils/Testdata.json';
 
+const testData = Array.isArray(data) ? data : [data]
 
-for (const da of data)
+for (const da of testData)
 {
 test(`@Web first playwright test2 for ${da.username}`,async({browser})=>
 {
@@ -151,4 +152,3 @@ const rowid=await orderlist.nth(i).locator("th").textContent()
 const oid=await page.locator(".col-text").textContent()
 expect(orderid.includes(oid)).toBeTruthy()
 });
-

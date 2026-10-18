@@ -1,4 +1,4 @@
-const {test,expect}=require('@Playwright/test');
+const {test,expect}=require('@playwright/test');
 test('Child windows1',async({page})=>
 {
 await page.goto("https://rahulshettyacademy.com/angularpractice/")
