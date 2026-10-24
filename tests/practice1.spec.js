@@ -6,3 +6,5 @@ test('practise1',async({browser})=>
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
 }
 )
+
+//Akshay_fixes
