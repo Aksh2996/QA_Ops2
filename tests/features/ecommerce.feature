@@ -1,16 +1,4 @@
-Feature: Login functionality
-  @login
-  Scenario Outline: Scenario Outline name: Successful login with valid credentials
-    Given I am on the login page
-    When I enter a valid username as "<username>"
-    And I enter a valid password as "<password>"
-    And I click the Login button
-    Then I should be logged in successfully
-
-    Examples:
-        | username               | password     |
-        | aprakash270@gmail.com  | Vihaan@1234  |
-
+Feature: Login and product functionality
   Scenario: Successful login and adding products
     Given I am on the login page2
     When I enter a valid username and password2
